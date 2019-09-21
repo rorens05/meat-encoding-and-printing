@@ -54,26 +54,6 @@ export default class App extends Component {
 
 	render() {
 		return (
-			// imported_by: '',
-			// from: '',
-			// meat_description: '',
-			// evqmilc_no: '',
-			// container_no: '',
-			// volume: '',
-			// brand_name: '',
-			// production_date: '',
-			// expiry_date: '',
-			// fme_name: '',
-			// fme_no: '',
-			// paking_size: '',
-			// lot_no: '',
-			// buyer: '',
-			// destination: '',
-			// withdrawal_date: '',
-			// mtv_no: '',
-			// day: '',
-			// month: '',
-			// time: ''
 			<div>
 				<div className='outer-div'>
 					<div className='inner-div'>
@@ -112,9 +92,9 @@ export default class App extends Component {
 
 				<div className='display'>
 					<h1>Encoding Program</h1>
-					<form>
+					<form noValidate>
 						{this.renderAllKey()}
-						<input
+						<span
 							className='btn btn-reset'
 							value='Reset'
 							type='submit'
@@ -123,8 +103,10 @@ export default class App extends Component {
 
 								window.location.reload();
 							}}
-						/>
-						<input
+						>
+							Reset
+						</span>
+						<span
 							className='btn btn-print'
 							value='Print'
 							type='submit'
@@ -132,7 +114,9 @@ export default class App extends Component {
 								e.preventDefault();
 								window.print();
 							}}
-						/>
+						>
+							Print
+						</span>
 					</form>
 					<br />
 					<br />
